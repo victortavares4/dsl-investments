@@ -1,0 +1,330 @@
+# ===============================================================================
+# EXEMPLOS VÁLIDOS - DIFERENTES PERFIS E CENÁRIOS
+# ===============================================================================
+
+# 🟢 EXEMPLO 1: CARTEIRA CONSERVADORA TRADICIONAL
+CARTEIRA_CONSERVADORA = '''
+carteira {
+    nome = "Carteira Aposentadoria";
+    perfil = "conservador";
+    horizonte_temporal = 15 anos;
+    
+    alocação {
+        renda_fixa = 75%;
+        fundos_imobiliarios = 20%;
+        ações_nacionais = 5%;
+    }
+    
+    restrições {
+        volatilidade_maxima = 5%;
+        taxa_administrativa_maxima = 1%;
+    }
+    
+    rebalanceamento {
+        frequencia = semestral;
+        tolerancia = 1%;
+    }
+}
+'''
+
+# 🟡 EXEMPLO 2: CARTEIRA MODERADA EQUILIBRADA
+CARTEIRA_MODERADA = '''
+carteira {
+    nome = "Carteira Família";
+    perfil = "moderado";
+    horizonte_temporal = 8 anos;
+    
+    alocação {
+        ações_nacionais = 35%;
+        renda_fixa = 35%;
+        fundos_imobiliarios = 20%;
+        ações_internacionais = 10%;
+    }
+    
+    restrições {
+        volatilidade_maxima = 12%;
+        taxa_administrativa_maxima = 2%;
+        setorial {
+            tecnologia = 15%;
+            financeiro = 10%;
+            saude = 8%;
+        }
+    }
+    
+    rebalanceamento {
+        frequencia = trimestral;
+        tolerancia = 3%;
+    }
+}
+'''
+
+# 🔴 EXEMPLO 3: CARTEIRA ARROJADA GROWTH
+CARTEIRA_ARROJADA = '''
+carteira {
+    nome = "Carteira Growth Jovem";
+    perfil = "arrojado";
+    horizonte_temporal = 20 anos;
+    
+    alocação {
+        ações_nacionais = 45%;
+        ações_internacionais = 30%;
+        fundos_multimercado = 15%;
+        renda_fixa = 10%;
+    }
+    
+    restrições {
+        volatilidade_maxima = 25%;
+        taxa_administrativa_maxima = 3%;
+        setorial {
+            tecnologia = 30%;
+            financeiro = 15%;
+            commodities = 10%;
+            saude = 12%;
+        }
+        geografico {
+            brasil = 45%;
+            eua = 25%;
+            europa = 15%;
+            asia = 10%;
+            emergentes = 5%;
+        }
+    }
+    
+    rebalanceamento {
+        frequencia = mensal;
+        tolerancia = 5%;
+    }
+}
+'''
+
+# 💼 EXEMPLO 4: CARTEIRA INSTITUCIONAL COMPLEXA
+CARTEIRA_INSTITUCIONAL = '''
+carteira {
+    nome = "Fundo Pensão XYZ";
+    perfil = "moderado";
+    horizonte_temporal = 25 anos;
+    
+    alocação {
+        ações_nacionais = 28%;
+        ações_internacionais = 22%;
+        fundos_imobiliarios = 18%;
+        renda_fixa = 20%;
+        fundos_multimercado = 12%;
+    }
+    
+    restrições {
+        volatilidade_maxima = 15%;
+        taxa_administrativa_maxima = 1.5%;
+        setorial {
+            tecnologia = 12%;
+            financeiro = 15%;
+            energia = 8%;
+            saude = 10%;
+            telecomunicacoes = 5%;
+            varejo = 7%;
+        }
+        geografico {
+            brasil = 50%;
+            america_norte = 25%;
+            europa = 15%;
+            asia_pacifico = 7%;
+            emergentes = 3%;
+        }
+    }
+    
+    rebalanceamento {
+        frequencia = trimestral;
+        tolerancia = 2%;
+    }
+}
+'''
+
+# 🎯 EXEMPLO 5: CARTEIRA MINIMALISTA (APENAS OBRIGATÓRIOS)
+CARTEIRA_SIMPLES = '''
+carteira {
+    nome = "Carteira Iniciante";
+    perfil = "conservador";
+    horizonte_temporal = 3 anos;
+    
+    alocação {
+        renda_fixa = 80%;
+        ações_nacionais = 20%;
+    }
+}
+'''
+
+# 🌟 EXEMPLO 6: CARTEIRA INTERNACIONAL DIVERSIFICADA
+CARTEIRA_INTERNACIONAL = '''
+carteira {
+    nome = "Global Portfolio";
+    perfil = "moderado";
+    horizonte_temporal = 12 anos;
+    
+    alocação {
+        ações_internacionais = 40%;
+        ações_nacionais = 25%;
+        fundos_imobiliarios = 15%;
+        renda_fixa = 15%;
+        fundos_multimercado = 5%;
+    }
+    
+    restrições {
+        volatilidade_maxima = 18%;
+        taxa_administrativa_maxima = 2.5%;
+        geografico {
+            brasil = 40%;
+            eua = 30%;
+            europa = 20%;
+            asia = 8%;
+            outros = 2%;
+        }
+    }
+    
+    rebalanceamento {
+        frequencia = trimestral;
+        tolerancia = 3%;
+    }
+}
+'''
+
+# 🏠 EXEMPLO 7: CARTEIRA FOCADA EM RENDA (FIIs)
+CARTEIRA_RENDA = '''
+carteira {
+    nome = "Carteira Renda Mensal";
+    perfil = "conservador";
+    horizonte_temporal = 10 anos;
+    
+    alocação {
+        fundos_imobiliarios = 60%;
+        renda_fixa = 30%;
+        ações_nacionais = 10%;
+    }
+    
+    restrições {
+        volatilidade_maxima = 8%;
+        taxa_administrativa_maxima = 1.8%;
+        setorial {
+            logistica = 20%;
+            shoppings = 15%;
+            escritorios = 10%;
+            residencial = 15%;
+        }
+    }
+    
+    rebalanceamento {
+        frequencia = semestral;
+        tolerancia = 2%;
+    }
+}
+'''
+
+# ⚡ EXEMPLO 8: CARTEIRA TECH/INOVAÇÃO
+CARTEIRA_TECH = '''
+carteira {
+    nome = "Innovation Fund";
+    perfil = "arrojado";
+    horizonte_temporal = 15 anos;
+    
+    alocação {
+        ações_internacionais = 50%;
+        ações_nacionais = 30%;
+        fundos_multimercado = 15%;
+        renda_fixa = 5%;
+    }
+    
+    restrições {
+        volatilidade_maxima = 30%;
+        taxa_administrativa_maxima = 3.5%;
+        setorial {
+            tecnologia = 40%;
+            biotecnologia = 15%;
+            energia_renovavel = 10%;
+            telecomunicacoes = 8%;
+            fintech = 12%;
+        }
+    }
+    
+    rebalanceamento {
+        frequencia = mensal;
+        tolerancia = 4%;
+    }
+}
+'''
+
+# ===============================================================================
+# EXEMPLOS COM ERROS (PARA DEMONSTRAR VALIDAÇÕES)
+# ===============================================================================
+
+# ❌ ERRO 1: SOMA INCORRETA (110%)
+ERRO_SOMA_ALTA = '''
+carteira {
+    nome = "Carteira Erro Soma";
+    perfil = "moderado";
+    horizonte_temporal = 5 anos;
+    
+    alocação {
+        ações_nacionais = 60%;
+        renda_fixa = 50%;
+        // Soma = 110%, deveria ser 100%
+    }
+}
+'''
+
+# ❌ ERRO 2: SOMA BAIXA (80%)
+ERRO_SOMA_BAIXA = '''
+carteira {
+    nome = "Carteira Incompleta";
+    perfil = "moderado";
+    horizonte_temporal = 5 anos;
+    
+    alocação {
+        ações_nacionais = 30%;
+        renda_fixa = 50%;
+        // Soma = 80%, faltam 20%
+    }
+}
+'''
+
+# ❌ ERRO 3: PERFIL INCONSISTENTE
+ERRO_PERFIL_INCONSISTENTE = '''
+carteira {
+    nome = "Carteira Inconsistente";
+    perfil = "conservador";
+    horizonte_temporal = 5 anos;
+    
+    alocação {
+        ações_nacionais = 60%;
+        ações_internacionais = 30%;
+        fundos_multimercado = 10%;
+        // 100% em risco para perfil conservador!
+    }
+}
+'''
+
+# ❌ ERRO 4: SINTAXE - PONTO E VÍRGULA AUSENTE
+ERRO_SINTAXE = '''
+carteira {
+    nome = "Carteira Sintaxe Erro"  // Faltando ;
+    perfil = "moderado";
+    horizonte_temporal = 5 anos;
+    
+    alocação {
+        ações_nacionais = 50%;
+        renda_fixa = 50%;
+    }
+}
+'''
+
+# ❌ ERRO 5: PERCENTUAL INVÁLIDO
+ERRO_PERCENTUAL = '''
+carteira {
+    nome = "Carteira Percentual Erro";
+    perfil = "moderado";
+    horizonte_temporal = 5 anos;
+    
+    alocação {
+        ações_nacionais = 150%;  // Percentual > 100%
+        renda_fixa = -50%;       // Percentual negativo
+    }
+}
+'''
