@@ -1255,8 +1255,8 @@ carteira {
 
     
     test_cases = [
-        ("TESTE 1: Carteira Válida (deve gerar PDF)", carteira_valida),
-        # ("TESTE 2: Carteira com Erro de Soma Inválida (não deve gerar PDF)", carteira_com_erro_soma)
+        # ("TESTE 1: Carteira Válida (deve gerar PDF)", carteira_valida),
+        ("TESTE 2: Carteira com Erro de Soma Inválida (não deve gerar PDF)", carteira_com_erro_soma)
         # ("TESTE 3: Carteira com Erro de Perfil Inconsistente (não deve gerar PDF)", carteira_com_erro_perfil_incosistente),
         # ("TESTE 4: Carteira com Erro de Sintaxe (não deve gerar PDF)", carteira_com_erro_sintaxe),
         # ("TESTE 5: Carteira com Erro de Porcentagem (não deve gerar PDF)", carteira_com_erro_porcentagem)
